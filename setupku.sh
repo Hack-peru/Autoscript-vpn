@@ -56,15 +56,7 @@ CEKEXPIRED () {
         echo "SCRIPT ANDA EXPIRED";
         exit 0
 fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/kanghory/Autoscript-vpn/main/izin | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo "IZIN DI TERIMA!!"
-CEKEXPIRED
-else
-echo "Akses di tolak!! Benget sia hurung!!";
-exit 0
-fi
+
 
 clear
 echo "Add Domain for vmess/vless/trojan dll"
